@@ -39,7 +39,7 @@ Here is a config that uses all of the available options for node-inspector:
       port: 1337,
       host: 'localhost'
     }
-  }s
+  }
 }
 ```
 
