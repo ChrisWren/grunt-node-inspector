@@ -1,0 +1,30 @@
+{
+  "name": "grunt-node-inspector",
+  "version": "0.0.0",
+  "description": "Run node-inspector with the rest of your workflow to debug node.js",
+  "main": "tasks/index.js",
+  "scripts": {
+    "test": "grunt"
+  },
+  "keywords": [
+    "node-inspector",
+    "gruntplugin",
+    "grunt",
+    "debug"
+  ],
+  "author": "ChrisWren",
+  "license": "MIT",
+  "peerDependencies": {
+    "grunt": "~0.4.1"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-release": "~0.5.1",
+    "grunt-contrib-jshint": "~0.6.2",
+    "matchdep": "~0.1.2",
+    "grunt-mdlint": "0.0.0"
+  },
+  "dependencies": {
+    "node-inspector": "0.3.4"
+  }
+}
