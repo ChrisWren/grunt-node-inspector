@@ -5,8 +5,11 @@ module.exports = function (grunt) {
       default: {},
       custom: {
         options: {
-          host: 'localhost',
-          port: 7878
+          'web-port': 1337,
+          'web-host': 'localhost',
+          'debug-port': 5857,
+          'save-live-edit': true,
+          hidden: ['configuration.js']
         }
       }
     },
