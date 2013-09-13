@@ -13,12 +13,20 @@ module.exports = function (grunt) {
     var done = this.async();
     var args = [__dirname + '/../node_modules/node-inspector/bin/inspector'];
 
-    if (options.port) {
-      args.push('--web-port=' + options.port);
+    if (options['web-port']) {
+      args.push('--web-port=' + options['web-port']);
     }
 
-    if (options.host) {
-      args.push('--web-host=' + options.host);
+    if (options['web-host']) {
+      args.push('--web-host=' + options['web-host']);
+    }
+
+    if (options['debug-port']) {
+      args.push('--debug-port=' + options['debug-port']);
+    }
+
+    if (options['save-live-edit']) {
+      args.push('--save-live-edit=' + options['save-live-edit']);
     }
 
     grunt.util.spawn({
