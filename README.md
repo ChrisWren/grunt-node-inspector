@@ -39,8 +39,7 @@ Here is a config that uses all of the available options for node-inspector:
       'web-port': 1337,
       'web-host': 'localhost',
       'debug-port': 5857,
-      'save-live-edit': true,
-      hidden: ['configuration.js']
+      'save-live-edit': true
     }
   }
 }
@@ -54,19 +53,19 @@ Type: `Number` Default: 8080
 
 Port to host the inspector.
 
-### web-host
+#### web-host
 
 Type: `String` Default: '0.0.0.0'
 
 Host to listen on.
 
-### debug-port
+#### debug-port
 
 Type: `Number` Default: 5858
 
 Port to connect to the debugging app.
 
-### save-live-edit
+#### save-live-edit
 
 Type: `Boolean` Default: false
 
@@ -74,7 +73,7 @@ Save live edit changes to disk.
 
 # Changelog
 
-**0.1.0** - Added debug-port and save-live-editoptions. Renamed port to web-port and host to web-host to match node-inspector cli naming.
+**0.1.0** - Added debug-port and save-live-edit options. Renamed port to web-port and host to web-host to match node-inspector cli naming.
 
 **Breaking changes:**
 
