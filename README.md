@@ -24,7 +24,7 @@ The minimal usage of node-inspector runs with no options:
 
 ```js
 'node-inspector': {
-  default: {}
+  dev: {}
 }
 ```
 
