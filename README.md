@@ -73,6 +73,8 @@ Save live edit changes to disk.
 
 # Changelog
 
+**0.1.1** - Bumped node-inspector version to ~0.5.0.
+
 **0.1.0** - Added debug-port and save-live-edit options. Renamed port to web-port and host to web-host to match node-inspector cli naming.
 
 **Breaking changes:**
