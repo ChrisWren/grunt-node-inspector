@@ -39,7 +39,8 @@ Here is a config that uses all of the available options for node-inspector:
       'web-port': 1337,
       'web-host': 'localhost',
       'debug-port': 5857,
-      'save-live-edit': true
+      'save-live-edit': true,
+      'stack-trace-limit': 4
     }
   }
 }
@@ -71,7 +72,15 @@ Type: `Boolean` Default: false
 
 Save live edit changes to disk.
 
+#### stack-trace-limit
+
+Type: `Number` Default: 50
+
+Number of stack frames to show on a breakpoint.
+
 # Changelog
+
+**0.1.2** - Bumped node-inspector version to ~0.6.0, adding the new `--stack-trace-limit` option. Allowed node-inspector to be listed as a dependency in a project's package.json instead of forcing it to be in grunt-node-inspector's node_modules folder.
 
 **0.1.1** - Bumped node-inspector version to ~0.5.0.
 
