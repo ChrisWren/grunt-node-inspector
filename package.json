@@ -4,7 +4,7 @@
   "description": "Run node-inspector with the rest of your workflow to debug node.js",
   "main": "tasks/index.js",
   "scripts": {
-    "test": "grunt"
+    "test": "grunt test"
   },
   "keywords": [
     "node-inspector",
@@ -26,7 +26,9 @@
     "grunt-release": "~0.5.1",
     "grunt-contrib-jshint": "~0.6.2",
     "matchdep": "~0.1.2",
-    "grunt-mdlint": "0.0.0"
+    "grunt-mdlint": "0.0.0",
+    "should": "~2.1.0",
+    "grunt-simple-mocha": "~0.4.0"
   },
   "dependencies": {
     "node-inspector": "~0.6.0"
