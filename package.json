@@ -29,6 +29,6 @@
     "grunt-mdlint": "0.0.0"
   },
   "dependencies": {
-    "node-inspector": "~0.5.0"
+    "node-inspector": "~0.6.0"
   }
 }
