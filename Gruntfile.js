@@ -9,7 +9,7 @@ module.exports = function (grunt) {
           'web-host': 'localhost',
           'debug-port': 5857,
           'save-live-edit': true,
-          hidden: ['configuration.js']
+          'stack-trace-limit': 3
         }
       }
     },
@@ -43,11 +43,23 @@ module.exports = function (grunt) {
       files: {
         src:  ['*.js', 'tasks/*.js']
       }
+    },
+    simplemocha: {
+      options: {
+        globals: ['should'],
+        timeout: 10000,
+        ignoreLeaks: false,
+        ui: 'bdd',
+        reporter: 'spec'
+      },
+      all: {
+        src: ['test/integrationTests.js']
+      }
     }
   });
 
   grunt.registerTask('default', ['inspector']);
-  grunt.registerTask('test', ['jshint', 'mdlint']);
+  grunt.registerTask('test', ['jshint', 'simplemocha', 'mdlint']);
 
   grunt.loadTasks('tasks');
 
