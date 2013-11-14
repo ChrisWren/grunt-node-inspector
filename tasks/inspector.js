@@ -11,7 +11,7 @@ module.exports = function (grunt) {
   grunt.registerMultiTask('node-inspector', 'Runs node-inspector to debug your node.js JavaScripts', function () {
     var options = this.options();
     var done = this.async();
-    var args = [__dirname + '/../node_modules/node-inspector/bin/inspector'];
+    var args = [require.resolve('node-inspector/bin/inspector')];
 
     if (options['web-port']) {
       args.push('--web-port=' + options['web-port']);
