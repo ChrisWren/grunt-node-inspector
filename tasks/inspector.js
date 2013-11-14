@@ -13,21 +13,19 @@ module.exports = function (grunt) {
     var done = this.async();
     var args = [require.resolve('node-inspector/bin/inspector')];
 
-    if (options['web-port']) {
-      args.push('--web-port=' + options['web-port']);
-    }
-
-    if (options['web-host']) {
-      args.push('--web-host=' + options['web-host']);
-    }
-
-    if (options['debug-port']) {
-      args.push('--debug-port=' + options['debug-port']);
-    }
-
-    if (options['save-live-edit']) {
-      args.push('--save-live-edit=' + options['save-live-edit']);
-    }
+    [
+      'web-port',
+      'web-host',
+      'debug-port',
+      'save-live-edit',
+      'readTimeout',
+      'stack-trace-limit'
+    ].forEach(function (option) {
+      if (option in options) {
+        args.push('--' + option);
+        args.push(options[option]);
+      }
+    });
 
     grunt.util.spawn({
       cmd: 'node',
