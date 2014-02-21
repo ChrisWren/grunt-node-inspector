@@ -19,7 +19,8 @@ module.exports = function (grunt) {
       'debug-port',
       'save-live-edit',
       'readTimeout',
-      'stack-trace-limit'
+      'stack-trace-limit',
+      'no-preload'
     ].forEach(function (option) {
       if (option in options) {
         args.push('--' + option);

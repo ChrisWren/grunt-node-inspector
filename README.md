@@ -80,6 +80,8 @@ Number of stack frames to show on a breakpoint.
 
 # Changelog
 
+**0.1.3** - Bumped node-inspector version to ~0.7.0, adding `--no-preload` option for faster loading.
+
 **0.1.2** - Bumped node-inspector version to ~0.6.0, adding the new `--stack-trace-limit` option. Allowed node-inspector to be listed as a dependency in a project's package.json instead of forcing it to be in grunt-node-inspector's node_modules folder.
 
 **0.1.1** - Bumped node-inspector version to ~0.5.0.
