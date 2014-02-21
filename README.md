@@ -40,6 +40,7 @@ Here is a config that uses all of the available options for node-inspector:
       'web-host': 'localhost',
       'debug-port': 5857,
       'save-live-edit': true,
+      'no-preload': true ,
       'stack-trace-limit': 4
     }
   }
@@ -71,6 +72,12 @@ Port to connect to the debugging app.
 Type: `Boolean` Default: false
 
 Save live edit changes to disk.
+
+#### no-preload 
+
+Type: `Boolean` Default: false
+
+Disables preloading *.js to speed up startup
 
 #### stack-trace-limit
 
