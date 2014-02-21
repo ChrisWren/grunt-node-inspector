@@ -1,7 +1,8 @@
 # grunt-node-inspector
 > Run [node-inspector](https://github.com/node-inspector/node-inspector) as a grunt task for easy configuration and integration with the rest of your workflow
 
-[![NPM version](https://badge.fury.io/js/grunt-node-inspector.png)](http://badge.fury.io/js/grunt-node-inspector) [![Dependency Status](https://gemnasium.com/ChrisWren/grunt-node-inspector.png)](https://gemnasium.com/ChrisWren/grunt-node-inspector)
+[![NPM version](https://badge.fury.io/js/grunt-node-inspector.png)](http://badge.fury.io/js/grunt-node-inspector) 
+[![Dependency Status](https://david-dm.org/ChrisWren/grunt-node-inspector.png)](https://david-dm.org/ChrisWren/grunt-node-inspector)
 
 ## Getting Started
 If you haven't used grunt before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a gruntfile as well as install and use grunt plugins. Once you're familiar with that process, install this plugin with this command:
@@ -40,7 +41,7 @@ Here is a config that uses all of the available options for node-inspector:
       'web-host': 'localhost',
       'debug-port': 5857,
       'save-live-edit': true,
-      'no-preload': true ,
+      'no-preload': true,
       'stack-trace-limit': 4
     }
   }
