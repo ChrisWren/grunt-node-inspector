@@ -1,4 +1,9 @@
+/*jshint node:true*/
 module.exports = function (grunt) {
+  'use strict';
+  require('matchdep').filterDev('grunt-*').forEach(function (name) {
+    console.log(name);
+  });
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
   grunt.initConfig({
     'node-inspector': {
@@ -9,7 +14,8 @@ module.exports = function (grunt) {
           'web-host': 'localhost',
           'debug-port': 5857,
           'save-live-edit': true,
-          'stack-trace-limit': 3
+          'stack-trace-limit': 3,
+          'hidden': ['node_modules']
         }
       }
     },
@@ -41,7 +47,7 @@ module.exports = function (grunt) {
         }
       },
       files: {
-        src:  ['*.js', 'tasks/*.js']
+        src: ['*.js', 'tasks/*.js']
       }
     },
     simplemocha: {
@@ -58,7 +64,7 @@ module.exports = function (grunt) {
     }
   });
 
-  grunt.registerTask('default', ['inspector']);
+  grunt.registerTask('default', ['node-inspector:custom']);
   grunt.registerTask('test', ['jshint', 'simplemocha', 'mdlint']);
 
   grunt.loadTasks('tasks');
