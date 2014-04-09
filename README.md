@@ -1,7 +1,7 @@
 # grunt-node-inspector
 > Run [node-inspector](https://github.com/node-inspector/node-inspector) as a grunt task for easy configuration and integration with the rest of your workflow
 
-[![NPM version](https://badge.fury.io/js/grunt-node-inspector.png)](http://badge.fury.io/js/grunt-node-inspector) 
+[![NPM version](https://badge.fury.io/js/grunt-node-inspector.png)](http://badge.fury.io/js/grunt-node-inspector)
 [![Dependency Status](https://david-dm.org/ChrisWren/grunt-node-inspector.png)](https://david-dm.org/ChrisWren/grunt-node-inspector)
 
 ## Getting Started
@@ -42,7 +42,8 @@ Here is a config that uses all of the available options for node-inspector:
       'debug-port': 5857,
       'save-live-edit': true,
       'no-preload': true,
-      'stack-trace-limit': 4
+      'stack-trace-limit': 4,
+      'hidden': ['node_modules']
     }
   }
 }
@@ -74,7 +75,7 @@ Type: `Boolean` Default: false
 
 Save live edit changes to disk.
 
-#### no-preload 
+#### no-preload
 
 Type: `Boolean` Default: false
 
@@ -86,7 +87,15 @@ Type: `Number` Default: 50
 
 Number of stack frames to show on a breakpoint.
 
+#### hidden
+
+Type: `Array` Default: []
+
+Array of files to hide from the UI (breakpoints in these files will be ignored).
+
 # Changelog
+
+**0.1.4** - Added `--hidden` option for hiding certain files/directories.
 
 **0.1.3** - Bumped node-inspector version to ~0.7.0, adding `--no-preload` option for faster loading.
 

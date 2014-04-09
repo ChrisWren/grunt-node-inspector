@@ -5,14 +5,13 @@
  * Copyright (c) 2013 Chris Wren
  * Licensed under the MIT license.
  */
+/*jshint node: true*/
 module.exports = function (grunt) {
   'use strict';
-
   grunt.registerMultiTask('node-inspector', 'Runs node-inspector to debug your node.js JavaScripts', function () {
     var options = this.options();
     var done = this.async();
     var args = [require.resolve('node-inspector/bin/inspector')];
-
     [
       'web-port',
       'web-host',
@@ -20,10 +19,15 @@ module.exports = function (grunt) {
       'save-live-edit',
       'readTimeout',
       'stack-trace-limit',
-      'no-preload'
+      'no-preload',
+      'hidden'
     ].forEach(function (option) {
       if (option in options) {
         args.push('--' + option);
+        if (option === 'hidden') {
+          args.push(JSON.stringify(options[option]));
+          return;
+        }
         args.push(options[option]);
       }
     });

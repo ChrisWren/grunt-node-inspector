@@ -1,11 +1,11 @@
-/*jshint expr: true*/
-
+/*jshint node: true, expr: true*/
+/*global describe, before, it*/
 var spawn = require('child_process').spawn;
 var logOutput = '';
 require('should');
 
 function runInspector(target, done) {
-
+  'use strict';
   var inspectorProcess = spawn('grunt', ['node-inspector:' + target]);
 
   inspectorProcess.stdout.setEncoding('utf8');
@@ -19,15 +19,18 @@ function runInspector(target, done) {
 }
 
 describe('grunt-node-inspector', function () {
+  'use strict';
 
-  describe('when run', function() {
+  describe('when run', function () {
 
     before(function (done) {
       runInspector('custom', done);
     });
 
     it('should log that the server started', function () {
-      logOutput.should.include('Visit http://localhost:1337/debug?port=5857 to start debugging.');
+      logOutput.should.include(
+        'Visit http://localhost:1337/debug?port=5857 to start debugging.'
+      );
     });
 
   });
