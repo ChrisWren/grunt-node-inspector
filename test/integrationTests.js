@@ -1,6 +1,6 @@
 /*jshint node: true, expr: true*/
 /*global describe, before, it*/
-var spawn = require('child_process').spawn;
+var spawn = process.platform === 'win32' ? require('win-spawn') : require('child_process').spawn;
 var logOutput = '';
 require('should');
 

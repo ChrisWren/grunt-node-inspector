@@ -28,7 +28,8 @@
     "matchdep": "~0.1.2",
     "grunt-mdlint": "0.0.0",
     "should": "~2.1.0",
-    "grunt-simple-mocha": "~0.4.0"
+    "grunt-simple-mocha": "~0.4.0",
+    "win-spawn": "^2.0.0"
   },
   "dependencies": {
     "node-inspector": "~0.7.0"
