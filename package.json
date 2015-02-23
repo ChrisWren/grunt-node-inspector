@@ -32,6 +32,6 @@
     "win-spawn": "^2.0.0"
   },
   "dependencies": {
-    "node-inspector": "~0.7.0"
+    "node-inspector": "^0.9.0"
   }
 }
