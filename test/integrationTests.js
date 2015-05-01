@@ -28,9 +28,7 @@ describe('grunt-node-inspector', function () {
     });
 
     it('should log that the server started', function () {
-      logOutput.should.include(
-        'Visit http://localhost:1337/debug?port=5857 to start debugging.'
-      );
+      logOutput.should.containEql('Visit http://localhost:1337/debug?ws=localhost:1337&port=5857');
     });
 
   });
