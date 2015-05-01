@@ -1,9 +1,6 @@
 /*jshint node:true*/
 module.exports = function (grunt) {
   'use strict';
-  require('matchdep').filterDev('grunt-*').forEach(function (name) {
-    console.log(name);
-  });
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
   grunt.initConfig({
     'node-inspector': {
