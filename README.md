@@ -95,6 +95,8 @@ Array of files to hide from the UI (breakpoints in these files will be ignored).
 
 # Changelog
 
+**0.2.0** - Bumped node-inspector version to ^0.10.0.
+
 **0.1.6** - Bumped node-inspector version to ^0.9.0 (compatible with latest Chrome updates).
 
 **0.1.5** - Added `--hidden` option for hiding certain files/directories.
