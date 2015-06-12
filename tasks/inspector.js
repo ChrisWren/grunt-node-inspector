@@ -28,7 +28,7 @@ module.exports = function (grunt) {
           args.push(JSON.stringify(options[option]));
           return;
         }
-        args.push(options[option]);
+        //args.push(options[option]);
       }
     });
 
