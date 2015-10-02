@@ -122,6 +122,12 @@ A file containing a valid SSL certificate for starting inspector listening over 
 
 # Changelog
 
+**0.4.0** - Changed `no-preload` option to `preload`. Fixed `hidden` option parsing. Added SSL options.
+
+**Breaking changes:**
+
+options['no-preload'] is now options.preload. If you previously set `no-preload` to `true`, you should change your gruntfile to set `preload` to `false`.
+
 **0.3.0** - Bumped node-inspector version to ^0.12.3.
 
 **0.2.0** - Bumped node-inspector version to ^0.10.0.
