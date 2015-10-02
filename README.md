@@ -37,13 +37,28 @@ Here is a config that uses all of the available options for node-inspector:
 'node-inspector': {
   custom: {
     options: {
-      'web-port': 1337,
       'web-host': 'localhost',
+      'web-port': 1337,
       'debug-port': 5857,
       'save-live-edit': true,
-      'no-preload': true,
+      'preload': false,
+      'hidden': ['node_modules'],
       'stack-trace-limit': 4,
-      'hidden': ['node_modules']
+    }
+  }
+}
+```
+
+To start node-inspector to listen over HTTPS, use the `ssl-key` and `ssl-cert` options:
+
+'node-inspector': {
+  custom: {
+    options: {
+      'web-host': 'localhost',
+      'web-port': 1337,
+      'debug-port': 5857,
+      'ssl-key': './ssl/key.pem',
+      'ssl-cert': './ssl/cert.pem'
     }
   }
 }
@@ -75,11 +90,11 @@ Type: `Boolean` Default: false
 
 Save live edit changes to disk.
 
-#### no-preload
+#### preload
 
-Type: `Boolean` Default: false
+Type: `Boolean` Default: true
 
-Disables preloading *.js to speed up startup
+Enables preloading *.js files. Set to `false` to speed up startup
 
 #### stack-trace-limit
 
@@ -93,7 +108,25 @@ Type: `Array` Default: []
 
 Array of files to hide from the UI (breakpoints in these files will be ignored).
 
+#### ssl-key
+
+Type: `String` Default: ''
+
+A file containing a valid SSL key for starting inspector listening over HTTPS.
+
+#### ssl-cert
+
+Type: `String` Default: ''
+
+A file containing a valid SSL certificate for starting inspector listening over HTTPS.
+
 # Changelog
+
+**0.4.0** - Changed `no-preload` option to `preload`. Fixed `hidden` option parsing. Added SSL options.
+
+**Breaking changes:**
+
+options['no-preload'] is now options.preload. If you previously set `no-preload` to `true`, you should change your gruntfile to set `preload` to `false`.
 
 **0.3.0** - Bumped node-inspector version to ^0.12.3.
 
