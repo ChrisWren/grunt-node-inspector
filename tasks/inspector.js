@@ -22,13 +22,12 @@ module.exports = function (grunt) {
       'no-preload',
       'hidden'
     ].forEach(function (option) {
-      if (option in options) {
+      if (option in options && options[option]) {
         args.push('--' + option);
         if (option === 'hidden') {
           args.push(JSON.stringify(options[option]));
           return;
         }
-        args.push(options[option]);
       }
     });
 
