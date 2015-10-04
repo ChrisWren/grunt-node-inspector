@@ -6,13 +6,14 @@ require('should');
 
 function runInspector(target, done) {
   'use strict';
-  var inspectorProcess = spawn('grunt', ['node-inspector:' + target]);
+  var inspectorProcess = spawn('grunt', ['node-inspector:' + target], {detached: true});
 
   inspectorProcess.stdout.setEncoding('utf8');
   inspectorProcess.stdout.on('data', function (data) {
     logOutput += data;
     if (data.match(/debugging/)) {
-      inspectorProcess.kill();
+      // Kill all processes spawned by `grunt xxx`
+      process.kill(-inspectorProcess.pid);
       done();
     }
   });
