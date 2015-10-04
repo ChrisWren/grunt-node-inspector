@@ -1,5 +1,5 @@
 # grunt-node-inspector
-> Run [node-inspector](https://github.com/node-inspector/node-inspector) as a grunt task for easy configuration and integration with the rest of your workflow
+> Run [node-inspector](https://github.com/node-inspector/node-inspector) as a grunt task for easy configuration and integration with the rest of your workflow.
 
 [![NPM version](https://badge.fury.io/js/grunt-node-inspector.png)](http://badge.fury.io/js/grunt-node-inspector)
 [![Dependency Status](https://david-dm.org/ChrisWren/grunt-node-inspector.png)](https://david-dm.org/ChrisWren/grunt-node-inspector) [![Travis Status](https://travis-ci.org/ChrisWren/grunt-node-inspector.png)](https://travis-ci.org/ChrisWren/grunt-node-inspector)
@@ -121,6 +121,12 @@ Type: `String` Default: ''
 A file containing a valid SSL certificate for starting inspector listening over HTTPS.
 
 # Changelog
+
+**0.4.0** - Changed `--no-preload` option to `--preload`. Fixed `--hidden` option parsing. Added SSL options. Support node v4.
+
+**Breaking changes:**
+
+options['no-preload'] is now options.preload. If you previously set `no-preload` to `true`, you should change your gruntfile to set `preload` to `false`.
 
 **0.3.0** - Bumped node-inspector version to ^0.12.3.
 
