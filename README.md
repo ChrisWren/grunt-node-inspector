@@ -51,7 +51,7 @@ Here is a config that uses all of the available options for node-inspector:
 
 To start node-inspector to listen over HTTPS, use the `ssl-key` and `ssl-cert` options:
 
-```
+``` js
 'node-inspector': {
   custom: {
     options: {
