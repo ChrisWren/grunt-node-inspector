@@ -19,7 +19,7 @@
   "author": "ChrisWren",
   "license": "MIT",
   "peerDependencies": {
-    "grunt": "^0.4.5"
+    "grunt": ">=0.4.0"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
