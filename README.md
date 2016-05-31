@@ -123,6 +123,8 @@ A file containing a valid SSL certificate for starting inspector listening over 
 
 # Changelog
 
+**0.4.2** - Add support for node v5/6. Updated deps.
+
 **0.4.1** - Chore release (fix README).
 
 **0.4.0** - Changed `--no-preload` option to `--preload`. Fixed `--hidden` option parsing. Added SSL options. Support node v4.
