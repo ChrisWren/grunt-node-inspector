@@ -29,7 +29,7 @@ describe('grunt-node-inspector', function () {
     });
 
     it('should log that the server started', function () {
-      logOutput.should.containEql('Visit http://localhost:1337/?ws=localhost:1337&port=5857');
+      logOutput.should.containEql('Visit http://localhost:1337/?port=5857');
     });
 
   });

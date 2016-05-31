@@ -16,7 +16,6 @@ module.exports = function (grunt) {
         }
       }
     },
-    mdlint: ['README.md'],
     jshint: {
       options: {
         bitwise: true,
@@ -62,7 +61,7 @@ module.exports = function (grunt) {
   });
 
   grunt.registerTask('default', ['node-inspector:custom']);
-  grunt.registerTask('test', ['jshint', 'simplemocha', 'mdlint']);
+  grunt.registerTask('test', ['jshint', 'simplemocha']);
 
   grunt.loadTasks('tasks');
 
