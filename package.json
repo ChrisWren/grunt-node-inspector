@@ -1,6 +1,6 @@
 {
   "name": "grunt-node-inspector",
-  "version": "0.4.2",
+  "version": "0.5.0",
   "description": "Run node-inspector with the rest of your workflow to debug node.js",
   "main": "tasks/inspector.js",
   "scripts": {
