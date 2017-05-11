@@ -122,6 +122,7 @@ Type: `String` Default: ''
 A file containing a valid SSL certificate for starting inspector listening over HTTPS.
 
 # Changelog
+**0.5.0** - Bumped node-inspector version to ^1.1.1.
 
 **0.4.2** - Add support for node v5/6. Updated deps.
 
